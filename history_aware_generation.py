@@ -70,7 +70,7 @@ def ask_question(user_question):
     answer = result.content
 
     # (5) Append the conversation to chat history
-    chat_history.append(HumanMessage(HumanMessage(content=user_question)))
+    chat_history.append(HumanMessage(content=user_question))
     chat_history.append(AIMessage(content=answer))
 
     print(f"Answer: {answer}")
@@ -80,7 +80,7 @@ def start_chat():
     print("Ask me question! Type 'quit' to exit.")
 
     while True:
-        question = input("\nYour question:")
+        question = input("\nYour question: ")
 
         if question.lower() == 'quit':
             print("Exiting...")
